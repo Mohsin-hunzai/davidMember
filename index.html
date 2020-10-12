@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+
+
+
+        const myDavidFamily = [
+  {
+    name: "John",
+    children: ["Ali", "MOhsin", "Alex", "Tajwar"],
+  },
+  {
+    name: "Alx",
+    children: ["Ayaz", "Faizan", "Karem", "Sajjad"],
+  },
+  {
+    name: "Cendrella",
+    children: ["Michelle", "Sarah", "Shireen", "Sajjad"],
+  },
+];
+const headerOne = document.createElement("h1");
+headerOne.innerHTML = "Mr David";
+headerOne.style.fontSize = "50px";
+document.body.append(headerOne);
+
+var ul = document.createElement("ul");
+document.body.append(ul);
+
+myDavidFamily.forEach((allFamily) => {
+  let li = document.createElement("li");
+  li.innerHTML = allFamily.name;
+  ul.appendChild(li);
+
+  let innerUl = document.createElement("ul");
+  li.appendChild(innerUl);
+  let innerli = document.createElement("li");
+  innerli.innerHTML = allFamily.children[0];
+  innerUl.appendChild(innerli);
+  innerli = document.createElement("li");
+  innerli.innerHTML = allFamily.children[1];
+  innerUl.appendChild(innerli);
+  innerli = document.createElement("li");
+  innerli.innerHTML = allFamily.children[2];
+  innerUl.appendChild(innerli);
+  innerli = document.createElement("li");
+  innerli.innerHTML = allFamily.children[3];
+  innerUl.appendChild(innerli);
+});
+      
+      
+      </script>
+</body>
+</html>
